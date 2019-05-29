@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'DeleteCourse.ui',
 # licensing of 'DeleteCourse.ui' applies.
 #
-# Created: Wed May 29 13:03:33 2019
+# Created: Wed May 29 18:03:51 2019
 #      by: pyside2-uic  running on PySide2 5.12.0
 #
 # WARNING! All changes made in this file will be lost!
@@ -169,7 +169,7 @@ class Ui_Form(object):
         font.setPointSize(12)
         self.table.setFont(font)
         self.table.setObjectName("table")
-        self.table.setColumnCount(6)
+        self.table.setColumnCount(7)
         self.table.setRowCount(2)
         item = QtWidgets.QTableWidgetItem()
         self.table.setVerticalHeaderItem(0, item)
@@ -187,6 +187,8 @@ class Ui_Form(object):
         self.table.setHorizontalHeaderItem(4, item)
         item = QtWidgets.QTableWidgetItem()
         self.table.setHorizontalHeaderItem(5, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.table.setHorizontalHeaderItem(6, item)
         item = QtWidgets.QTableWidgetItem()
         self.table.setItem(0, 0, item)
         self.back = QtWidgets.QPushButton(self.widget)
@@ -246,9 +248,10 @@ class Ui_Form(object):
         self.table.horizontalHeaderItem(0).setText(QtWidgets.QApplication.translate("Form", "Course Name", None, -1))
         self.table.horizontalHeaderItem(1).setText(QtWidgets.QApplication.translate("Form", "Speaker", None, -1))
         self.table.horizontalHeaderItem(2).setText(QtWidgets.QApplication.translate("Form", "Date / Time", None, -1))
-        self.table.horizontalHeaderItem(3).setText(QtWidgets.QApplication.translate("Form", "Tag", None, -1))
-        self.table.horizontalHeaderItem(4).setText(QtWidgets.QApplication.translate("Form", "Type", None, -1))
-        self.table.horizontalHeaderItem(5).setText(QtWidgets.QApplication.translate("Form", "Details", None, -1))
+        self.table.horizontalHeaderItem(3).setText(QtWidgets.QApplication.translate("Form", "Location", None, -1))
+        self.table.horizontalHeaderItem(4).setText(QtWidgets.QApplication.translate("Form", "Tag", None, -1))
+        self.table.horizontalHeaderItem(5).setText(QtWidgets.QApplication.translate("Form", "Type", None, -1))
+        self.table.horizontalHeaderItem(6).setText(QtWidgets.QApplication.translate("Form", "Details", None, -1))
         __sortingEnabled = self.table.isSortingEnabled()
         self.table.setSortingEnabled(False)
         self.table.setSortingEnabled(__sortingEnabled)

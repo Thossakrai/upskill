@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'profile.ui',
 # licensing of 'profile.ui' applies.
 #
-# Created: Wed May 29 00:28:04 2019
+# Created: Wed May 29 17:54:19 2019
 #      by: pyside2-uic  running on PySide2 5.12.0
 #
 # WARNING! All changes made in this file will be lost!
@@ -171,28 +171,28 @@ class Ui_Form(object):
         self.pushButton.setFont(font)
         self.pushButton.setObjectName("pushButton")
         self.Fname = QtWidgets.QLabel(self.widget)
-        self.Fname.setGeometry(QtCore.QRect(450, 100, 281, 41))
+        self.Fname.setGeometry(QtCore.QRect(450, 70, 281, 41))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(20)
         self.Fname.setFont(font)
         self.Fname.setObjectName("Fname")
         self.Lname = QtWidgets.QLabel(self.widget)
-        self.Lname.setGeometry(QtCore.QRect(760, 100, 311, 41))
+        self.Lname.setGeometry(QtCore.QRect(760, 70, 311, 41))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(20)
         self.Lname.setFont(font)
         self.Lname.setObjectName("Lname")
-        self.Sex = QtWidgets.QLabel(self.widget)
-        self.Sex.setGeometry(QtCore.QRect(450, 160, 231, 41))
+        self.Phone = QtWidgets.QLabel(self.widget)
+        self.Phone.setGeometry(QtCore.QRect(450, 120, 231, 41))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(20)
-        self.Sex.setFont(font)
-        self.Sex.setObjectName("Sex")
+        self.Phone.setFont(font)
+        self.Phone.setObjectName("Phone")
         self.User = QtWidgets.QLabel(self.widget)
-        self.User.setGeometry(QtCore.QRect(450, 40, 351, 41))
+        self.User.setGeometry(QtCore.QRect(450, 20, 351, 41))
         font = QtGui.QFont()
         font.setFamily("Mongolian Baiti")
         font.setPointSize(20)
@@ -257,6 +257,13 @@ class Ui_Form(object):
         font.setPointSize(20)
         self.pushButton_4.setFont(font)
         self.pushButton_4.setObjectName("pushButton_4")
+        self.Email = QtWidgets.QLabel(self.widget)
+        self.Email.setGeometry(QtCore.QRect(450, 170, 231, 41))
+        font = QtGui.QFont()
+        font.setFamily("Mongolian Baiti")
+        font.setPointSize(20)
+        self.Email.setFont(font)
+        self.Email.setObjectName("Email")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -266,7 +273,7 @@ class Ui_Form(object):
         self.pushButton.setText(QtWidgets.QApplication.translate("Form", "UpSkill Organiser", None, -1))
         self.Fname.setText(QtWidgets.QApplication.translate("Form", "FirstName", None, -1))
         self.Lname.setText(QtWidgets.QApplication.translate("Form", "LastName", None, -1))
-        self.Sex.setText(QtWidgets.QApplication.translate("Form", "Gender", None, -1))
+        self.Phone.setText(QtWidgets.QApplication.translate("Form", "Phone Number", None, -1))
         self.User.setText(QtWidgets.QApplication.translate("Form", "Username", None, -1))
         self.pushButton_2.setText(QtWidgets.QApplication.translate("Form", "Go Back", None, -1))
         self.pushButton_3.setText(QtWidgets.QApplication.translate("Form", "Update Profile", None, -1))
@@ -289,6 +296,7 @@ class Ui_Form(object):
         self.tableWidget.horizontalHeaderItem(3).setText(QtWidgets.QApplication.translate("Form", "Event Type", None, -1))
         self.label_2.setText(QtWidgets.QApplication.translate("Form", "Upcoming Courses", None, -1))
         self.pushButton_4.setText(QtWidgets.QApplication.translate("Form", "View All Courses", None, -1))
+        self.Email.setText(QtWidgets.QApplication.translate("Form", "Email", None, -1))
 
 
 if __name__ == "__main__":

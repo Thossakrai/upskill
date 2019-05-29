@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="414e7272-857a-4c19-83bb-fd540eb36468" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="414e7272-857a-4c19-83bb-fd540eb36468" name="Default Changelist" comment="Addition of Learner Menu/Enroll/View Interface">
+      <change beforePath="$PROJECT_DIR$/screen/LrnConfirmEnroll.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen/LrnConfirmEnroll.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen/LrnViewDetailb4Enroll.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen/LrnViewDetailb4Enroll.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen/LrnViewEnrolled.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen/LrnViewEnrolled.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen/LrnViewOrgProf.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen/LrnViewOrgProf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen/MenuforOrganiser.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen/MenuforOrganiser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen/OrgCreateCourse.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen/OrgCreateCourse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen/OrgDeleteCourse.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen/OrgDeleteCourse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen/OrgEditCourse.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen/OrgEditCourse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen/OrgSel2Del.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen/OrgUpdateProf.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen/OrgUpdateProf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen/OrgViewAll.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen/OrgViewAll.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen/ViewtheCourse.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen/ViewtheCourse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen/orgreg.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen/orgreg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen/signin.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen/signin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen/viewprofileorg.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen/viewprofileorg.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,16 +36,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="orgreg.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/screen/orgreg.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/screen/signin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4119">
+              <caret line="463" lean-forward="true" selection-start-line="463" selection-end-line="463" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrgCreateCourse.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/screen/OrgCreateCourse.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -111,7 +147,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="upskill" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -131,9 +167,32 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="orgreg" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="upskill" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/screen" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/screen/orgreg.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.orgreg" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.orgreg" />
       </list>
     </recent_temporary>
   </component>
@@ -158,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559113143412</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Addition of Learner Menu/Enroll/View Interface">
+      <created>1559116845337</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1559116845338</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -175,6 +241,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25313947" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -219,7 +286,8 @@
     <MESSAGE value="Default Changelist" />
     <MESSAGE value="addition organisation interface" />
     <MESSAGE value="True Additional Organiser Interface all except atteend" />
-    <option name="LAST_COMMIT_MESSAGE" value="True Additional Organiser Interface all except atteend" />
+    <MESSAGE value="Addition of Learner Menu/Enroll/View Interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Addition of Learner Menu/Enroll/View Interface" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/upskill$main.coverage" NAME="main Coverage Results" MODIFIED="1559071571741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -249,13 +317,30 @@
     <entry file="file://$PROJECT_DIR$/env/bin/activate" />
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screen/orgreg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screen/signin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4119">
+          <caret line="463" lean-forward="true" selection-start-line="463" selection-end-line="463" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screen/OrgCreateCourse.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

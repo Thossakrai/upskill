@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'ViewCourse.ui',
 # licensing of 'ViewCourse.ui' applies.
 #
-# Created: Wed May 29 13:08:57 2019
+# Created: Wed May 29 18:04:29 2019
 #      by: pyside2-uic  running on PySide2 5.12.0
 #
 # WARNING! All changes made in this file will be lost!
@@ -161,7 +161,7 @@ class Ui_Form(object):
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.PlaceholderText, brush)
         Form.setPalette(palette)
         self.widget = QtWidgets.QWidget(Form)
-        self.widget.setGeometry(QtCore.QRect(0, 0, 1081, 721))
+        self.widget.setGeometry(QtCore.QRect(0, 0, 1081, 711))
         self.widget.setObjectName("widget")
         self.back = QtWidgets.QPushButton(self.widget)
         self.back.setGeometry(QtCore.QRect(20, 580, 1041, 111))
@@ -174,6 +174,7 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setPointSize(40)
         font.setWeight(75)
+        font.setUnderline(True)
         font.setBold(True)
         self.label.setFont(font)
         self.label.setAlignment(QtCore.Qt.AlignCenter)
@@ -197,19 +198,19 @@ class Ui_Form(object):
         self.label_4.setFont(font)
         self.label_4.setObjectName("label_4")
         self.label_5 = QtWidgets.QLabel(self.widget)
-        self.label_5.setGeometry(QtCore.QRect(90, 300, 151, 40))
+        self.label_5.setGeometry(QtCore.QRect(90, 350, 151, 40))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.label_5.setFont(font)
         self.label_5.setObjectName("label_5")
         self.label_6 = QtWidgets.QLabel(self.widget)
-        self.label_6.setGeometry(QtCore.QRect(90, 350, 151, 41))
+        self.label_6.setGeometry(QtCore.QRect(90, 400, 151, 41))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.label_6.setFont(font)
         self.label_6.setObjectName("label_6")
         self.label_7 = QtWidgets.QLabel(self.widget)
-        self.label_7.setGeometry(QtCore.QRect(90, 400, 151, 41))
+        self.label_7.setGeometry(QtCore.QRect(90, 450, 151, 41))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.label_7.setFont(font)
@@ -245,7 +246,7 @@ class Ui_Form(object):
         self.datetime.setFont(font)
         self.datetime.setObjectName("datetime")
         self.tag = QtWidgets.QLabel(self.widget)
-        self.tag.setGeometry(QtCore.QRect(250, 290, 681, 51))
+        self.tag.setGeometry(QtCore.QRect(250, 340, 681, 51))
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setWeight(75)
@@ -255,7 +256,7 @@ class Ui_Form(object):
         self.tag.setFont(font)
         self.tag.setObjectName("tag")
         self.type = QtWidgets.QLabel(self.widget)
-        self.type.setGeometry(QtCore.QRect(250, 340, 681, 51))
+        self.type.setGeometry(QtCore.QRect(250, 390, 681, 51))
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setWeight(75)
@@ -265,7 +266,7 @@ class Ui_Form(object):
         self.type.setFont(font)
         self.type.setObjectName("type")
         self.details = QtWidgets.QLabel(self.widget)
-        self.details.setGeometry(QtCore.QRect(250, 390, 801, 51))
+        self.details.setGeometry(QtCore.QRect(250, 440, 801, 51))
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setWeight(75)
@@ -274,6 +275,22 @@ class Ui_Form(object):
         font.setBold(True)
         self.details.setFont(font)
         self.details.setObjectName("details")
+        self.tag_2 = QtWidgets.QLabel(self.widget)
+        self.tag_2.setGeometry(QtCore.QRect(250, 290, 681, 51))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        font.setWeight(75)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setBold(True)
+        self.tag_2.setFont(font)
+        self.tag_2.setObjectName("tag_2")
+        self.label_8 = QtWidgets.QLabel(self.widget)
+        self.label_8.setGeometry(QtCore.QRect(90, 300, 151, 40))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_8.setFont(font)
+        self.label_8.setObjectName("label_8")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -294,6 +311,8 @@ class Ui_Form(object):
         self.tag.setText(QtWidgets.QApplication.translate("Form", "Politics", None, -1))
         self.type.setText(QtWidgets.QApplication.translate("Form", "Art", None, -1))
         self.details.setText(QtWidgets.QApplication.translate("Form", "How to act and get away for 6 years", None, -1))
+        self.tag_2.setText(QtWidgets.QApplication.translate("Form", "TOT Tower", None, -1))
+        self.label_8.setText(QtWidgets.QApplication.translate("Form", "Location", None, -1))
 
 
 if __name__ == "__main__":

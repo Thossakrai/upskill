@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'ConfirmEnroll.ui',
 # licensing of 'ConfirmEnroll.ui' applies.
 #
-# Created: Wed May 29 14:48:28 2019
+# Created: Wed May 29 18:05:04 2019
 #      by: pyside2-uic  running on PySide2 5.12.0
 #
 # WARNING! All changes made in this file will be lost!
@@ -59,7 +59,7 @@ class Ui_Form(object):
         self.label_8.setFont(font)
         self.label_8.setObjectName("label_8")
         self.label_10 = QtWidgets.QLabel(Form)
-        self.label_10.setGeometry(QtCore.QRect(190, 280, 681, 51))
+        self.label_10.setGeometry(QtCore.QRect(190, 310, 681, 51))
         font = QtGui.QFont()
         font.setPointSize(15)
         font.setWeight(75)
@@ -81,7 +81,7 @@ class Ui_Form(object):
         self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
         self.label_4 = QtWidgets.QLabel(Form)
-        self.label_4.setGeometry(QtCore.QRect(400, 290, 381, 41))
+        self.label_4.setGeometry(QtCore.QRect(400, 310, 381, 41))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.label_4.setFont(font)
@@ -126,11 +126,27 @@ class Ui_Form(object):
         self.label_13.setFont(font)
         self.label_13.setObjectName("label_13")
         self.label_7 = QtWidgets.QLabel(Form)
-        self.label_7.setGeometry(QtCore.QRect(400, 220, 231, 41))
+        self.label_7.setGeometry(QtCore.QRect(400, 210, 231, 41))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.label_7.setFont(font)
         self.label_7.setObjectName("label_7")
+        self.label_14 = QtWidgets.QLabel(Form)
+        self.label_14.setGeometry(QtCore.QRect(400, 260, 151, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_14.setFont(font)
+        self.label_14.setObjectName("label_14")
+        self.label_15 = QtWidgets.QLabel(Form)
+        self.label_15.setGeometry(QtCore.QRect(190, 260, 181, 51))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        font.setWeight(75)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setBold(True)
+        self.label_15.setFont(font)
+        self.label_15.setObjectName("label_15")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -151,6 +167,8 @@ class Ui_Form(object):
         self.label_12.setText(QtWidgets.QApplication.translate("Form", "Confirm Enrollment", None, -1))
         self.label_13.setText(QtWidgets.QApplication.translate("Form", "Date/Time", None, -1))
         self.label_7.setText(QtWidgets.QApplication.translate("Form", "31st May 2019 18:00", None, -1))
+        self.label_14.setText(QtWidgets.QApplication.translate("Form", "TOT Tower", None, -1))
+        self.label_15.setText(QtWidgets.QApplication.translate("Form", "Speaker: ", None, -1))
 
 
 if __name__ == "__main__":
