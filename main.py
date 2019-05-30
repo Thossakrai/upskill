@@ -23,7 +23,7 @@ class SignInUI(QWidget):
 
     def Login(self):
         self.hide()
-        self.LrnMenu = LearnerMenu()
+        self.LrnMenu = LearnerMenu(self)
         self.LrnMenu.show()
 
 
