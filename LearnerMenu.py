@@ -1,5 +1,6 @@
 import sys
 
+from LearnerSearchMenu import LrnSearch
 from LearnerProfile import LrnProfile
 from LearnerViewEnrolledCourse import LrnViewEnrolled
 from screen.LrnMenu import Ui_Form
@@ -21,6 +22,7 @@ class LearnerMenu(QWidget):
         self.ui.pushButton_2.clicked.connect(self.Logout)
         self.ui.pushButton.clicked.connect(self.ViewEnrolled)
         self.ui.pushButton_3.clicked.connect(self.Profile)
+        self.ui.Search.clicked.connect(self.Find)
 
     def Logout(self):
         self.hide()
@@ -35,6 +37,12 @@ class LearnerMenu(QWidget):
         self.hide()
         self.prof = LrnProfile(self)
         self.prof.show()
+
+    def Find(self):
+        self.hide()
+        self.finding = LrnSearch(self)
+        self.finding.show()
+
 
 
 
