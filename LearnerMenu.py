@@ -1,5 +1,6 @@
 import sys
 
+from LearnerProfile import LrnProfile
 from LearnerViewEnrolledCourse import LrnViewEnrolled
 from screen.LrnMenu import Ui_Form
 from PySide2.QtCore import *
@@ -19,6 +20,7 @@ class LearnerMenu(QWidget):
         self.ui.setupUi(self)
         self.ui.pushButton_2.clicked.connect(self.Logout)
         self.ui.pushButton.clicked.connect(self.ViewEnrolled)
+        self.ui.pushButton_3.clicked.connect(self.Profile)
 
     def Logout(self):
         self.hide()
@@ -28,6 +30,11 @@ class LearnerMenu(QWidget):
         self.hide()
         self.LrnView = LrnViewEnrolled(self)
         self.LrnView.show()
+
+    def Profile(self):
+        self.hide()
+        self.prof = LrnProfile(self)
+        self.prof.show()
 
 
 
