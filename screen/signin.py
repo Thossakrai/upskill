@@ -180,6 +180,7 @@ class Ui_Form(object):
         self.lineEdit_2.setFont(font)
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.pushButton = QtWidgets.QPushButton(self.widget)
+        self.pushButton.clicked.connect(self.login())
         self.pushButton.setGeometry(QtCore.QRect(560, 110, 151, 151))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(8, 0, 255))
@@ -211,6 +212,7 @@ class Ui_Form(object):
         self.pushButton.setMouseTracking(True)
         self.pushButton.setObjectName("pushButton")
         self.pushButton_2 = QtWidgets.QPushButton(self.widget)
+        self.pushButton_2.clicked.connect(self.signup_learner())
         self.pushButton_2.setGeometry(QtCore.QRect(110, 430, 601, 101))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(39, 255, 158))
@@ -232,6 +234,7 @@ class Ui_Form(object):
         self.pushButton_2.setAutoFillBackground(True)
         self.pushButton_2.setObjectName("pushButton_2")
         self.pushButton_3 = QtWidgets.QPushButton(self.widget)
+        self.pushButton_3.clicked.connect(self.signup_organiser())
         self.pushButton_3.setGeometry(QtCore.QRect(110, 550, 601, 101))
         font = QtGui.QFont()
         font.setFamily("Myriad Pro")
@@ -272,3 +275,12 @@ class Ui_Form(object):
         self.pushButton_3.setText(QtWidgets.QApplication.translate("Form", "Be an Organiser", None, -1))
         self.label.setText(QtWidgets.QApplication.translate("Form", "Log-In", None, -1))
         self.label_2.setText(QtWidgets.QApplication.translate("Form", "Sign-Up", None, -1))
+
+    def login(self):
+        print("login")
+
+    def signup_learner(self):
+        print("signup as a learner")
+
+    def signup_organiser(self):
+        print("signup as an iorganiser")
