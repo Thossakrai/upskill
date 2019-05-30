@@ -1,5 +1,7 @@
 import sys
 
+from OrganiserViewACourse import OrgViewAll
+from CreateCourses import OrgCreate
 from Org_ViewProfile import OrgProfile
 from screen.OrgMenu import Ui_Form
 from PySide2.QtCore import *
@@ -17,12 +19,25 @@ class LearnerMenu(QWidget):
         self.ui = Ui_Form()
         self.ui.setupUi(self)
         self.ui.profile.clicked.connect(self.Profile)
+        self.ui.create.clicked.connect(self.CreateCourse)
+        self.ui.display.clicked.connect(self.OrgViewAll)
+
 
 
     def Profile(self):
         self.hide()
         self.prof = OrgProfile(self)
         self.prof.show()
+
+    def CreateCourse(self):
+        self.hide()
+        self.create = OrgCreate(self)
+        self.create.show()
+
+    def OrgViewAll(self):
+        self.hide()
+        self.viewall = OrgViewAll(self)
+        self.viewall.show()
 
 
 
