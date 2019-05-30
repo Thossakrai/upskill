@@ -1,6 +1,5 @@
 import sys
 
-from EditLearnerProfile import EditLrnProf
 from screen.LrnProfile import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
@@ -8,26 +7,21 @@ from PySide2.QtGui import *
 from PySide2.QtMultimedia import QSound
 
 
-class LrnProfile(QWidget):
-    def __init__(self,LearnerViewEnrolledCourseWindow):
+class EditLrnProf(QWidget):
+    def __init__(self,LearnerProfile):
         QWidget.__init__(self, None)
-        self.viewenrolledWindow = LearnerViewEnrolledCourseWindow
+        self.viewenrolledWindow = LearnerProfile
         layout = QVBoxLayout()
         self.setLayout(layout)
         self.setWindowTitle("Menu")
         self.ui = Ui_Form()
         self.ui.setupUi(self)
         self.ui.Go_back.clicked.connect(self.goback)
-        self.ui.EditProf.clicked.connect(self.editdetail)
 
     def goback(self):
         self.hide()
         self.viewenrolledWindow.show()
 
-    def editdetail(self):
-        self.hide()
-        self.EditPref = EditLrnProf(self)
-        self.EditPref.show()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

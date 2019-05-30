@@ -1,14 +1,13 @@
 import sys
 
-from EditLearnerProfile import EditLrnProf
-from screen.LrnProfile import Ui_Form
+from screen.LrnDisplayCSearch import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
 from PySide2.QtMultimedia import QSound
 
 
-class LrnProfile(QWidget):
+class LrnSearch(QWidget):
     def __init__(self,LearnerViewEnrolledCourseWindow):
         QWidget.__init__(self, None)
         self.viewenrolledWindow = LearnerViewEnrolledCourseWindow
@@ -17,20 +16,15 @@ class LrnProfile(QWidget):
         self.setWindowTitle("Menu")
         self.ui = Ui_Form()
         self.ui.setupUi(self)
-        self.ui.Go_back.clicked.connect(self.goback)
-        self.ui.EditProf.clicked.connect(self.editdetail)
+        self.ui.pushButton.clicked.connect(self.goback)
 
     def goback(self):
         self.hide()
         self.viewenrolledWindow.show()
 
-    def editdetail(self):
-        self.hide()
-        self.EditPref = EditLrnProf(self)
-        self.EditPref.show()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    w = LrnProfile()
+    w = LrnSearch()
     w.show()
     sys.exit(app.exec_())

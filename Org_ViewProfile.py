@@ -1,36 +1,36 @@
 import sys
 
 from EditLearnerProfile import EditLrnProf
-from screen.LrnProfile import Ui_Form
+from screen.viewprofileorg import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
 from PySide2.QtMultimedia import QSound
 
 
-class LrnProfile(QWidget):
-    def __init__(self,LearnerViewEnrolledCourseWindow):
+class OrgProfile(QWidget):
+    def __init__(self,OrganiserMenuWindow):
         QWidget.__init__(self, None)
-        self.viewenrolledWindow = LearnerViewEnrolledCourseWindow
+        self.orgmenuWindow = OrganiserMenuWindow
         layout = QVBoxLayout()
         self.setLayout(layout)
         self.setWindowTitle("Menu")
         self.ui = Ui_Form()
         self.ui.setupUi(self)
-        self.ui.Go_back.clicked.connect(self.goback)
-        self.ui.EditProf.clicked.connect(self.editdetail)
+        self.ui.pushButton_2.clicked.connect(self.goback)
+        self.ui.pushButton_2.clicked.connect(self.goback)
 
     def goback(self):
         self.hide()
-        self.viewenrolledWindow.show()
+        self.orgmenuWindow.show()
 
-    def editdetail(self):
+    def goback(self):
         self.hide()
-        self.EditPref = EditLrnProf(self)
-        self.EditPref.show()
+        self.orgmenuWindow.show()
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    w = LrnProfile()
+    w = OrgProfile()
     w.show()
     sys.exit(app.exec_())
