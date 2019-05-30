@@ -1,5 +1,6 @@
 import sys
 
+from DeleteCourse import OrgDelete
 from OrganiserViewACourse import OrgViewAll
 from CreateCourses import OrgCreate
 from Org_ViewProfile import OrgProfile
@@ -21,6 +22,7 @@ class LearnerMenu(QWidget):
         self.ui.profile.clicked.connect(self.Profile)
         self.ui.create.clicked.connect(self.CreateCourse)
         self.ui.display.clicked.connect(self.OrgViewAll)
+        self.ui.delete_2.clicked.connect(self.OrgDel)
 
 
 
@@ -38,6 +40,11 @@ class LearnerMenu(QWidget):
         self.hide()
         self.viewall = OrgViewAll(self)
         self.viewall.show()
+
+    def OrgDel(self):
+        self.hide()
+        self.eliminate = OrgDelete(self)
+        self.eliminate.show()
 
 
 
