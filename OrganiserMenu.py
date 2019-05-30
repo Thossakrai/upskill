@@ -44,7 +44,7 @@ class OrganiserMenu(QWidget):
 
     def OrgDel(self):
         self.hide()
-        self.eliminate = OrgDelete(self)
+        self.eliminate = OrgDelete(self, self.uname)
         self.eliminate.show()
 
 

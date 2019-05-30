@@ -23,3 +23,6 @@ class Course:
         print(courses)
         conn.close()
         return courses
+
+    def deleteCourse(self, uname, title):
+        pass

@@ -30,6 +30,7 @@ class OrgViewAll(QWidget):
         self.course = Course()
         ##return all courses that user creted
         self.courses = self.course.viewCourse(self.uname)
+        return self.courses
 
 
 
