@@ -11,10 +11,11 @@ from PySide2.QtGui import *
 from PySide2.QtMultimedia import QSound
 
 
-class LearnerMenu(QWidget):
-    def __init__(self):
+class OrganiserMenu(QWidget):
+    def __init__(self, uname):
         QWidget.__init__(self, None)
         layout = QVBoxLayout()
+        self.uname = uname
         self.setLayout(layout)
         self.setWindowTitle("Menu")
         self.ui = Ui_Form()
@@ -33,7 +34,7 @@ class LearnerMenu(QWidget):
 
     def CreateCourse(self):
         self.hide()
-        self.create = OrgCreate(self)
+        self.create = OrgCreate(self, self.uname)
         self.create.show()
 
     def OrgViewAll(self):
@@ -52,6 +53,6 @@ class LearnerMenu(QWidget):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    w = LearnerMenu()
+    w = OrganiserMenu()
     w.show()
     sys.exit(app.exec_())

@@ -37,6 +37,10 @@ class Register(QWidget):
         upref = self.ui.type.currentText()
         pw = self.ui.Password.text()
         self.signupsystem = SignUpSystem(fname, lname, birthdate, gender, uname, pw, phone, email, upref, self.utype)
+        signup = self.signupsystem.signup()
+        if signup :
+            self.hide()
+            self.mainWindow.show()
 
 
 

@@ -23,6 +23,8 @@ class OrgViewAll(QWidget):
         self.orgmenuWindow.show()
 
 
+
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     w = OrgViewAll()

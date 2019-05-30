@@ -7,6 +7,7 @@ from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
 from backend.loginsystem import *
+from OrganiserMenu import OrganiserMenu
 from PySide2.QtMultimedia import QSound
 
 
@@ -25,10 +26,15 @@ class LoginUI(QWidget):
     def Login(self):
         self.loginsystem = LoginSystem(self.ui.lineEdit.text(), self.ui.lineEdit_2.text())
         utype = self.loginsystem.isValidUser()
-        if utype != None :
+        if utype == 'LRN' :
             self.hide()
             self.LrnMenu = LearnerMenu(self)
             self.LrnMenu.show()
+        elif utype == 'ORG' :
+            self.hide()
+            self.OrgMenu = OrganiserMenu(self.ui.lineEdit.text())
+            self.OrgMenu.show()
+
 
 
     def BeOrg(self):
@@ -45,7 +51,7 @@ class LoginUI(QWidget):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    w = SignInUI()
+    w = LoginUI()
     w.show()
     sys.exit(app.exec_())
     

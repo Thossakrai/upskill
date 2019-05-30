@@ -12,7 +12,6 @@ class SignUpSystem :
         self.email = email
         self.upref = upref
         self.utype = utype
-        self.signup()
 
     def signup(self):
         conn = sqlite3.connect('upskilldb.db')
@@ -23,4 +22,5 @@ class SignUpSystem :
         c.execute('INSERT INTO USERNAME_DETAIL VALUES(?,?)', (self.uname, self.password, ))
         conn.commit()
         conn.close()
+        return True
 
