@@ -4,20 +4,22 @@ from screen.OrgViewAll import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
-from backend.course import *
 from PySide2.QtMultimedia import QSound
+from backend.course import Course
 
 
 class OrgViewAll(QWidget):
-    def __init__(self,OrganiserMenuWindow):
+    def __init__(self,OrganiserMenuWindow, uname):
         QWidget.__init__(self, None)
         self.orgmenuWindow = OrganiserMenuWindow
+        self.uname = uname
         layout = QVBoxLayout()
         self.setLayout(layout)
         self.setWindowTitle("Menu")
         self.ui = Ui_Form()
         self.ui.setupUi(self)
         self.ui.pushButton.clicked.connect(self.goback)
+        self.getCourses()
 
     def goback(self):
         self.hide()
@@ -29,6 +31,8 @@ class OrgViewAll(QWidget):
         ##return all courses that user creted
         self.courses = self.course.viewCourse(self.uname)
         return self.courses
+
+
 
 
 
