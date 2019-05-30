@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'register.ui',
 # licensing of 'register.ui' applies.
 #
-# Created: Wed May 29 18:07:37 2019
+# Created: Thu May 30 13:41:18 2019
 #      by: pyside2-uic  running on PySide2 5.12.0
 #
 # WARNING! All changes made in this file will be lost!
@@ -62,9 +62,6 @@ class Ui_Form(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.ToolTipText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0, 128))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.PlaceholderText, brush)
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.WindowText, brush)
@@ -110,9 +107,6 @@ class Ui_Form(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.ToolTipText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0, 128))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.PlaceholderText, brush)
         brush = QtGui.QBrush(QtGui.QColor(116, 100, 120))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.WindowText, brush)
@@ -158,9 +152,6 @@ class Ui_Form(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.ToolTipText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0, 128))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.PlaceholderText, brush)
         self.widget.setPalette(palette)
         self.widget.setAutoFillBackground(True)
         self.widget.setObjectName("widget")
@@ -170,7 +161,7 @@ class Ui_Form(object):
         font.setFamily("Myriad Pro")
         font.setPointSize(12)
         self.Fname.setFont(font)
-        self.Fname.setStyleSheet("setStyleSheet(\"QLineEdit[readOnly=\"true\"])")
+        self.Fname.setStyleSheet("")
         self.Fname.setText("")
         self.Fname.setObjectName("Fname")
         self.Lname = QtWidgets.QLineEdit(self.widget)
@@ -263,9 +254,6 @@ class Ui_Form(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.ToolTipText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0, 128))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.PlaceholderText, brush)
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.WindowText, brush)
@@ -311,9 +299,6 @@ class Ui_Form(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.ToolTipText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0, 128))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.PlaceholderText, brush)
         brush = QtGui.QBrush(QtGui.QColor(85, 127, 127))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.WindowText, brush)
@@ -359,9 +344,6 @@ class Ui_Form(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.ToolTipText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0, 128))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.PlaceholderText, brush)
         self.Signup.setPalette(palette)
         font = QtGui.QFont()
         font.setPointSize(24)
