@@ -10,17 +10,6 @@ class LoginSystem(object):
         self.type = None
 
     def isValidUser(self):
-        conn = sqlite3.connect('upskilldb.db')
+        conn = sqlite3.connect('../upskilldb.db')
         c = conn.cursor()
-        c.execute('SELECT USERNAME FROM USERNAME_DETAIL WHERE USERNAME = ? AND PASSWORD = ?', (self.username, self.password))
-        data = c.fetchone()
-        if data == None :
-            return None
-        print(data)
-        c.execute('SELECT UTYPE FROM USER_DETAIL WHERE USERNAME = ?', (self.username,))
-        utype = c.fetchone()
-        conn.close()
-        print("utype = ", utype)
-        print(type(utype))
-        print(utype[0])
-        return utype[0]
+        c.execute('SELECT USERNAME FROM USER WHERE USERNAME = ?', self.username)
