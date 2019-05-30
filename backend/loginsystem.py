@@ -17,10 +17,10 @@ class LoginSystem(object):
         if data == None :
             return None
         print(data)
-        c.execute('SELECT UTYPE FROM USER_DETAIL WHERE USERNAME = ?', (self.username,))
+        c.execute('SELECT UTYPE, UPREF FROM USER_DETAIL WHERE USERNAME = ?', (self.username,))
         utype = c.fetchone()
         conn.close()
         print("utype = ", utype)
         print(type(utype))
-        print(utype[0])
-        return utype[0]
+        print(utype[0], utype[1])
+        return utype

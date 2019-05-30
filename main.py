@@ -26,11 +26,11 @@ class LoginUI(QWidget):
     def Login(self):
         self.loginsystem = LoginSystem(self.ui.lineEdit.text(), self.ui.lineEdit_2.text())
         utype = self.loginsystem.isValidUser()
-        if utype == 'LRN' :
+        if utype[0] == 'LRN' :
             self.hide()
-            self.LrnMenu = LearnerMenu(self)
+            self.LrnMenu = LearnerMenu(self, self.ui.lineEdit.text(), utype[1])
             self.LrnMenu.show()
-        elif utype == 'ORG' :
+        elif utype[0] == 'ORG' :
             self.hide()
             self.OrgMenu = OrganiserMenu(self.ui.lineEdit.text())
             self.OrgMenu.show()

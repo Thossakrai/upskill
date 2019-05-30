@@ -26,3 +26,15 @@ class Course:
 
     def deleteCourse(self, uname, title):
         pass
+
+
+    def browse(self, upref):
+        conn = sqlite3.connect('upskilldb.db')
+        c = conn.cursor()
+        courses = []
+        for row in c.execute('SELECT TITLE, SPEAKER, DATETIME, LOCATION, CTYPE, DETAIL FROM COURSES WHERE CTYPE = ?', (upref, )):
+            courses.append(row)
+        print(courses)
+        return courses
+
+    

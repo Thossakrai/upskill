@@ -11,12 +11,14 @@ from PySide2.QtMultimedia import QSound
 
 
 class LearnerMenu(QWidget):
-    def __init__(self,mainWindow):
+    def __init__(self,mainWindow, uname, upref):
         QWidget.__init__(self, None)
+        self.uname = uname
         self.mainWindow = mainWindow
+        self.upref = upref
         layout = QVBoxLayout()
         self.setLayout(layout)
-        self.setWindowTitle("Menu")
+        self.setWindowTitle("Learner Menu")
         self.ui = Ui_Form()
         self.ui.setupUi(self)
         self.ui.pushButton_2.clicked.connect(self.Logout)
@@ -40,7 +42,7 @@ class LearnerMenu(QWidget):
 
     def Find(self):
         self.hide()
-        self.finding = LrnSearch(self)
+        self.finding = LrnSearch(self, self.upref)
         self.finding.show()
 
 
