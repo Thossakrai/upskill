@@ -39,7 +39,7 @@ class OrganiserMenu(QWidget):
 
     def OrgViewAll(self):
         self.hide()
-        self.viewall = OrgViewAll(self)
+        self.viewall = OrgViewAll(self, self.uname)
         self.viewall.show()
 
     def OrgDel(self):

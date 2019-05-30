@@ -13,3 +13,13 @@ class Course:
         conn.commit()
         conn.close()
         return True
+
+    def viewCourse(self, uname):
+        conn = sqlite3.connect('upskilldb.db')
+        c = conn.cursor()
+        courses = []
+        for row in c.execute('SELECT TITLE, SPEAKER, DATETIME, LOCATION, TAG, CTYPE, DETAIL FROM COURSES WHERE UNAME = ?', (uname, )):
+            courses.append(row)
+        print(courses)
+        conn.close()
+        return courses
