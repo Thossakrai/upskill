@@ -20,6 +20,8 @@ class OrgViewAll(QWidget):
         self.ui.setupUi(self)
         self.ui.pushButton.clicked.connect(self.goback)
         self.getCourses()
+        self.ui.pushButton_2.clicked.connect(self.getCourses)
+
 
     def goback(self):
         self.hide()
@@ -32,9 +34,16 @@ class OrgViewAll(QWidget):
         self.courses = self.course.viewCourse(self.uname)
         return self.courses
 
-
-
-
+    """
+    def showCourse(self, ): # try to display
+        for d in self.courses:
+            row = []
+            for name in d:
+                item = QStandardItem(name)
+                item.setEditable(False)
+                row.append(item)
+            self.course.appendRow(row)
+    """
 
 
 
