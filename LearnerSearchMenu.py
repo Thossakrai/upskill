@@ -19,6 +19,7 @@ class LrnSearch(QWidget):
         self.ui = Ui_Form()
         self.ui.setupUi(self)
         self.ui.pushButton.clicked.connect(self.goback)
+        self.ui.pushButton_3.clicked.connect(self.searchCourse)
         self.browseCourse()
 
 
@@ -32,6 +33,13 @@ class LrnSearch(QWidget):
         self.course = Course()
         ##return courses match to the user preferences##
         self.courses = self.course.browse(self.upref)
+
+    def searchCourse(self):
+        self.search_text = self.ui.lineEdit.text()
+        self.course = Course()
+        self.courses = self.course.search(self.search_text)
+
+
 
 
 if __name__ == '__main__':
