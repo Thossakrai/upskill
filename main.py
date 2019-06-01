@@ -32,7 +32,7 @@ class LoginUI(QWidget):
             self.LrnMenu.show()
         elif utype[0] == 'ORG' :
             self.hide()
-            self.OrgMenu = OrganiserMenu(self.ui.lineEdit.text())
+            self.OrgMenu = OrganiserMenu(self, self.ui.lineEdit.text(), utype[1])
             self.OrgMenu.show()
 
 
