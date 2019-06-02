@@ -1,7 +1,8 @@
 from PySide2.QtSql import QSqlDatabase,QSqlQueryModel,QSqlQuery
 class User:
-    def __init__(self, uname = None):
+    def __init__(self, uname = None, password = None):
         self.uname = uname
+        self.password = password
 
     def updateProfile(self):
         pass
@@ -11,6 +12,19 @@ class User:
 
     def signup(self):
         pass
+
+    def getUserInfo(self):
+        db = QSqlDatabase("QSQLITE")
+        db.setDatabaseName("/Users/thossakrai/PycharmProjects/upskill/upskilldb.sqlite3")
+        db.open()
+        modal = QSqlQueryModel()
+        query = QSqlQuery(db)
+        query.prepare("SELECT * FROM USER_DETAIL WHERE UNAME = ?")
+        query.addBindValue(self.uname)
+        query.exec_()
+        modal.setQuery(query)
+        return modal
+
 
 class Learner(User):
     def __init__(self, uname):
@@ -23,7 +37,7 @@ class Learner(User):
         modal = QSqlQueryModel()
         query = QSqlQuery(db)
 
-        query.prepare("SELECT UNAME FROM COURSES WHERE TITLe = ? AND SPEAKER = ?")
+        query.prepare("SELECT UNAME FROM COURSES WHERE TITLE = ? AND SPEAKER = ?")
         query.addBindValue(course_title)
         query.addBindValue(speaker)
         query.exec_()
@@ -39,3 +53,15 @@ class Learner(User):
         complete = query.exec_()
         db.close()
         return complete
+
+    def viewEnrolledCourses(self):
+        db = QSqlDatabase("QSQLITE")
+        db.setDatabaseName("/Users/thossakrai/PycharmProjects/upskill/upskilldb.sqlite3")
+        db.open()
+        modal = QSqlQueryModel()
+        query = QSqlQuery(db)
+        query.prepare("SELECT TITLE, DATETIME, LOCATION, CTYPE FROM ENROLLMENT, COURSES WHERE ENROLLMENT.L_UNAME = ? AND ENROLLMENT.C_TITLE = COURSES.TITLE")
+        query.addBindValue(self.uname)
+        query.exec_()
+        modal.setQuery(query)
+        return modal

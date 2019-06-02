@@ -9,7 +9,7 @@ from PySide2.QtMultimedia import QSound
 
 
 class LrnProfile(QWidget):
-    def __init__(self,LearnerViewEnrolledCourseWindow):
+    def __init__(self,LearnerViewEnrolledCourseWindow, learner):
         QWidget.__init__(self, None)
         self.viewenrolledWindow = LearnerViewEnrolledCourseWindow
         layout = QVBoxLayout()
@@ -19,6 +19,7 @@ class LrnProfile(QWidget):
         self.ui.setupUi(self)
         self.ui.Go_back.clicked.connect(self.goback)
         self.ui.EditProf.clicked.connect(self.editdetail)
+        self.learner = learner
 
     def goback(self):
         self.hide()
@@ -28,6 +29,10 @@ class LrnProfile(QWidget):
         self.hide()
         self.EditPref = EditLrnProf(self)
         self.EditPref.show()
+
+    def getProfile(self):
+        self.user_info = self.learner.getUserInfo()
+        
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

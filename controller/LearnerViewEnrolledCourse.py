@@ -6,10 +6,11 @@ from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
 from PySide2.QtMultimedia import QSound
+from backend.User import *
 
 
 class LrnViewEnrolled(QWidget):
-    def __init__(self,LearnerMenuWindow):
+    def __init__(self, LearnerMenuWindow, learner):
         QWidget.__init__(self, None)
         self.menuWindow = LearnerMenuWindow
         layout = QVBoxLayout()
@@ -19,6 +20,9 @@ class LrnViewEnrolled(QWidget):
         self.ui.setupUi(self)
         self.ui.pushButton.clicked.connect(self.goback)
         self.ui.pushButton_2.clicked.connect(self.editdetail)
+        self.ui.pushButton_3.clicked.connect(self.cancelEnroll)
+        self.learner = learner
+        self.getEnrolledCourse()
 
     def goback(self):
         self.hide()
@@ -28,6 +32,14 @@ class LrnViewEnrolled(QWidget):
         self.hide()
         self.EditPref = LrnEditPref(self)
         self.EditPref.show()
+
+    def cancelEnroll(self):
+        pass
+
+    def getEnrolledCourse(self):
+        self.courses = self.learner.viewEnrolledCourses()
+        self.ui.tableView.setModel(self.courses)
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

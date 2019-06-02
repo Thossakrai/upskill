@@ -5,6 +5,7 @@ from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
 from PySide2.QtMultimedia import QSound
+from backend.User import Learner
 
 
 class LrnEditPref(QWidget):
@@ -17,6 +18,7 @@ class LrnEditPref(QWidget):
         self.ui = Ui_Form()
         self.ui.setupUi(self)
         self.ui.pushButton_5.clicked.connect(self.goback)
+
 
     def goback(self):
         self.hide()

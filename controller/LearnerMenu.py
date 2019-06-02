@@ -8,6 +8,7 @@ from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
 from PySide2.QtMultimedia import QSound
+from backend.User import *
 
 
 class LearnerMenu(QWidget):
@@ -25,6 +26,7 @@ class LearnerMenu(QWidget):
         self.ui.pushButton.clicked.connect(self.ViewEnrolled)
         self.ui.pushButton_3.clicked.connect(self.Profile)
         self.ui.Search.clicked.connect(self.Find)
+        self.learner = Learner(uname)
 
     def Logout(self):
         self.hide()
@@ -32,12 +34,12 @@ class LearnerMenu(QWidget):
 
     def ViewEnrolled(self):
         self.hide()
-        self.LrnView = LrnViewEnrolled(self)
+        self.LrnView = LrnViewEnrolled(self, self.learner)
         self.LrnView.show()
 
     def Profile(self):
         self.hide()
-        self.prof = LrnProfile(self)
+        self.prof = LrnProfile(self, self.learner)
         self.prof.show()
 
     def Find(self):
