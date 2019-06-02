@@ -3,14 +3,14 @@ import sqlite3
 
 class LoginSystem(object):
     def __init__(self, username, password):
-        # conn = sqlite3.connect('../upskilldb.db')
+        # conn = sqlite3.connect('../upskilldb.sqlite3')
         # c = conn.cursor()
         self.username = username
         self.password = password
         self.type = None
 
     def isValidUser(self):
-        conn = sqlite3.connect('upskilldb.db')
+        conn = sqlite3.connect('upskilldb.sqlite3')
         c = conn.cursor()
         c.execute('SELECT USERNAME FROM USERNAME_DETAIL WHERE USERNAME = ? AND PASSWORD = ?', (self.username, self.password))
         data = c.fetchone()

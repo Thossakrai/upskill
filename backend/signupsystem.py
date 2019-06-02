@@ -14,7 +14,7 @@ class SignUpSystem :
         self.utype = utype
 
     def signup(self):
-        conn = sqlite3.connect('upskilldb.db')
+        conn = sqlite3.connect('upskilldb.sqlite3')
         c = conn.cursor()
         values = (self.fname, self.lname, self.birthdate, self.uname, self.phone, self.email, self.utype, self.upref, )
         # values = ("x", "x", "x", "xxxxxxaaaa", "x", "x", "x", "x", )

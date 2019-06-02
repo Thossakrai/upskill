@@ -1,6 +1,6 @@
 import sys
 
-from screen.OrgViewAll import Ui_Form
+from screen.PunpunViewallcourses import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
@@ -32,13 +32,15 @@ class OrgViewAll(QWidget):
         self.course = Course()
         ##return all courses that user creted
         self.courses = self.course.viewCourse(self.uname)
-        self.updateUI()
+        print(self.courses)
+        self.updateUI(self.courses)
         return self.courses
 
 
 
-    def updateUI(self):
-        pass
+    def updateUI(self, courses):
+        self.ui.tableView.setModel(courses)
+        self.ui.tableView.show()
 
 
 

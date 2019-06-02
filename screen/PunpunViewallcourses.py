@@ -363,6 +363,7 @@ class Ui_Form(object):
         self.label_2.setText(QtWidgets.QApplication.translate("Form", "View All Courses", None, -1))
 
 
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)

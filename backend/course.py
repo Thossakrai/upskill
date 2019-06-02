@@ -7,7 +7,7 @@ class Course:
         pass
 
     def createCourse(self, title, speaker, dateline, loc, tag, ctype, details, uname):
-        conn = sqlite3.connect('upskilldb.db')
+        conn = sqlite3.connect('upskilldb.sqlite3')
         c = conn.cursor()
         values = (title, speaker, dateline, loc, tag, ctype, details, uname,)
         print(values)
@@ -17,32 +17,35 @@ class Course:
         return True
 
     def viewCourse(self, uname):
-        # conn = sqlite3.connect('upskilldb.db')
-        # c = conn.cursor()
-        # courses = []
-        # for row in c.execute(
-        #         'SELECT TITLE, SPEAKER, DATETIME, LOCATION, TAG, CTYPE, DETAIL FROM COURSES WHERE UNAME = ?', (uname,)):
-        #     courses.append(row)
-        # print(courses)
-        # conn.close()
-        # return courses
-        db = QSqlDatabase.addDatabase('QSQLITE')
-        db.setDatabaseName("../upskilldb.db")
-        ok = db.open()
+        db = QSqlDatabase.addDatabase("QSQLITE")
+        db.setDatabaseName("/Users/thossakrai/PycharmProjects/upskill/upskilldb.sqlite3")
+        isOpened = db.open()
+        print("valid  = ", db.isValid())
+
+        print("database success to connect")
         modal = QSqlQueryModel()
-        query = QSqlQuery()
-        query.prepare('SELECT TITLE, SPEAKER, DATETIME, LOCATION, TAG, CTYPE, DETAIL FROM COURSES WHERE UNAME = ?')
+        query = QSqlQuery(db)
+
+        # uname = "\'" + uname + "\'"
+        query.prepare("SELECT TITLE, SPEAKER, DATETIME, LOCATION, CTYPE ,  DETAIL FROM COURSES WHERE UNAME = ? ")
+
         query.addBindValue(uname)
-        query.exec_()
+        count = 0
+        # query = QSqlQuery("SELECT * FROM COURSE")
+        if query.exec_() :
+            while query.next() :
+                count += 1
+                print(query.value(0))
+        print(count)
         modal.setQuery(query)
-        print(modal)
+        db.close()
         return modal
 
     def deleteCourse(self, uname, title):
         pass
 
     def browse(self, upref):
-        conn = sqlite3.connect('upskilldb.db')
+        conn = sqlite3.connect('upskilldb.sqlite3')
         c = conn.cursor()
         self.courses = []
         for row in c.execute('SELECT TITLE, SPEAKER, DATETIME, LOCATION, CTYPE, DETAIL FROM COURSES WHERE CTYPE = ?',
@@ -52,7 +55,7 @@ class Course:
         return self.courses
 
     def search(self, text):
-        conn = sqlite3.connect('upskilldb.db')
+        conn = sqlite3.connect('upskilldb.sqlite3')
         c = conn.cursor()
         self.courses = []
         self.search_text = "%" + text + "%"
@@ -60,3 +63,4 @@ class Course:
                              (self.search_text,)):
             self.courses.append(row)
         return self.courses
+
