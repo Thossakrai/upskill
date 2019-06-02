@@ -1,6 +1,6 @@
 import sys
 
-from screen.LrnProfile import Ui_Form
+from screen.LrnEditDetails import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
@@ -16,9 +16,16 @@ class EditLrnProf(QWidget):
         self.setWindowTitle("Menu")
         self.ui = Ui_Form()
         self.ui.setupUi(self)
-        self.ui.Go_back.clicked.connect(self.goback)
+        # Go back
+        self.ui.pushButton_4.clicked.connect(self.goback)
+        # Save and quit
+        self.ui.pushButton_5.clicked.connect(self.save)
 
     def goback(self):
+        self.hide()
+        self.viewenrolledWindow.show()
+
+    def save(self):
         self.hide()
         self.viewenrolledWindow.show()
 

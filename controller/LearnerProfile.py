@@ -1,6 +1,6 @@
 import sys
 
-from controller.EditLearnerProfile import EditLrnProf
+from controller.OrgUpdateProfile import OrgImproveProfile
 from screen.LrnProfile import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
@@ -26,8 +26,8 @@ class LrnProfile(QWidget):
 
     def editdetail(self):
         self.hide()
-        self.EditPref = EditLrnProf(self)
-        self.EditPref.show()
+        self.EditProf = OrgImproveProfile(self)
+        self.EditProf.show()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
