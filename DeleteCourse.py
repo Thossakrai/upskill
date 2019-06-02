@@ -1,7 +1,8 @@
 import sys
 
 from OrgConfirmDelCourse import OrgConfirmDelete
-from screen.OrgDeleteCourse import Ui_Form
+# from screen.OrgDeleteCourse import Ui_Form
+from screen.DeleteCourse import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
@@ -40,8 +41,8 @@ class OrgDelete(QWidget):
         self.course.deleteCourse(self.uname, self.title)
 
     def godelete(self):
-        self.hide()
-        self.godel = OrgConfirmDelete(self)
+        # self.hide()
+        self.godel = OrgConfirmDelete(self, self.uname)
         self.godel.show()
 
 

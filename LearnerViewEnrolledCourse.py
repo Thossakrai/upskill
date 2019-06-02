@@ -1,7 +1,7 @@
 import sys
 
 from LearnerEditPref import LrnEditPref
-from screen.LrnViewEnrolled import Ui_Form
+from screen.viewallenrollment import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *

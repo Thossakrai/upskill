@@ -2,6 +2,7 @@ import sys
 
 from EditLearnerProfile import EditLrnProf
 from screen.viewprofileorg import Ui_Form
+from backend.User import *
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
@@ -18,15 +19,20 @@ class OrgProfile(QWidget):
         self.ui = Ui_Form()
         self.ui.setupUi(self)
         self.ui.pushButton_2.clicked.connect(self.goback)
-        self.ui.pushButton_2.clicked.connect(self.goback)
+        # self.ui.pushButton_2.clicked.connect(self.goback)
+        self.ui.pushButton_3.clicked.connect(self.editProfile)
 
     def goback(self):
         self.hide()
         self.orgmenuWindow.show()
 
-    def goback(self):
-        self.hide()
-        self.orgmenuWindow.show()
+    def editProfile(self):
+        print('edit profile mode')
+
+
+    # def goback(self):
+    #     self.hide()
+    #     self.orgmenuWindow.show()
 
 
 if __name__ == '__main__':

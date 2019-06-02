@@ -42,7 +42,7 @@ class LearnerMenu(QWidget):
 
     def Find(self):
         self.hide()
-        self.finding = LrnSearch(self, self.upref)
+        self.finding = LrnSearch(self, self.upref, self.uname)
         self.finding.show()
 
 
