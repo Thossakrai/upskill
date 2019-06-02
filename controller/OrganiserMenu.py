@@ -1,9 +1,9 @@
 import sys
 
-from DeleteCourse import OrgDelete
-from OrganiserViewACourse import OrgViewAll
-from CreateCourses import OrgCreate
-from Org_ViewProfile import OrgProfile
+from controller.DeleteCourse import OrgDelete
+from controller.OrganiserViewACourse import OrgViewAll
+from controller.CreateCourses import OrgCreate
+from controller.Org_ViewProfile import OrgProfile
 from screen.OrgMenu import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *

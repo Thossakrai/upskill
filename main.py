@@ -1,13 +1,13 @@
 import sys
 
-from LearnerMenu import LearnerMenu
-from Register import Register
+from controller.LearnerMenu import LearnerMenu
+from controller.Register import Register
 from screen.signin import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
 from backend.loginsystem import *
-from OrganiserMenu import OrganiserMenu
+from controller.OrganiserMenu import OrganiserMenu
 from PySide2.QtMultimedia import QSound
 
 

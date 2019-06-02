@@ -1,6 +1,6 @@
 import sys
 
-from OrgConfirmDelCourse import OrgConfirmDelete
+from controller.OrgConfirmDelCourse import OrgConfirmDelete
 # from screen.OrgDeleteCourse import Ui_Form
 from screen.DeleteCourse import Ui_Form
 from PySide2.QtCore import *

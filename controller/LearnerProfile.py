@@ -1,6 +1,6 @@
 import sys
 
-from EditLearnerProfile import EditLrnProf
+from controller.EditLearnerProfile import EditLrnProf
 from screen.LrnProfile import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *

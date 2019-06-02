@@ -1,8 +1,8 @@
 import sys
 
-from LearnerSearchMenu import LrnSearch
-from LearnerProfile import LrnProfile
-from LearnerViewEnrolledCourse import LrnViewEnrolled
+from controller.LearnerSearchMenu import LrnSearch
+from controller.LearnerProfile import LrnProfile
+from controller.LearnerViewEnrolledCourse import LrnViewEnrolled
 from screen.LrnMenu import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *

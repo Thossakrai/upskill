@@ -1,6 +1,6 @@
 import sys
 
-from LearnerEditPref import LrnEditPref
+from controller.LearnerEditPref import LrnEditPref
 from screen.viewallenrollment import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
