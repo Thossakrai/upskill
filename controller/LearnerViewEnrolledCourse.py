@@ -1,5 +1,6 @@
 import sys
 
+from controller.LearnerConfirmCancel import LrnConfirmCancel
 from controller.LearnerEditPref import LrnEditPref
 from screen.viewallenrollment import Ui_Form
 from PySide2.QtCore import *
@@ -19,6 +20,7 @@ class LrnViewEnrolled(QWidget):
         self.ui.setupUi(self)
         self.ui.pushButton.clicked.connect(self.goback)
         self.ui.pushButton_2.clicked.connect(self.editdetail)
+        self.ui.pushButton_3.clicked.connect(self.cancel)
 
     def goback(self):
         self.hide()
@@ -28,6 +30,11 @@ class LrnViewEnrolled(QWidget):
         self.hide()
         self.EditPref = LrnEditPref(self)
         self.EditPref.show()
+
+    def cancel(self):
+        self.hide()
+        self.remove = LrnConfirmCancel(self)
+        self.remove.show()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
