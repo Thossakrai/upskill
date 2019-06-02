@@ -19,7 +19,7 @@ class User:
         db.open()
         modal = QSqlQueryModel()
         query = QSqlQuery(db)
-        query.prepare("SELECT * FROM USER_DETAIL WHERE UNAME = ?")
+        query.prepare("SELECT * FROM USER_DETAIL WHERE USERNAME = ?")
         query.addBindValue(self.uname)
         query.exec_()
         modal.setQuery(query)

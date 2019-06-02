@@ -36,10 +36,6 @@ class OrgDelete(QWidget):
         self.ui.tableView.setModel(self.courses)
 
 
-    def deleteCourse(self):
-        self.title = "Java"
-        self.course.deleteCourse(self.uname, self.title)
-
     def godelete(self):
         # self.hide()
         self.godel = OrgConfirmDelete(self, self.uname)
