@@ -1,4 +1,6 @@
 from PySide2.QtSql import QSqlDatabase,QSqlQueryModel,QSqlQuery
+import sqlite3
+
 class User:
     def __init__(self, uname = None, password = None):
         self.uname = uname
@@ -8,7 +10,21 @@ class User:
         pass
 
     def login(self):
-        pass
+        conn = sqlite3.connect('upskilldb.sqlite3')
+        c = conn.cursor()
+        c.execute('SELECT USERNAME FROM USERNAME_DETAIL WHERE USERNAME = ? AND PASSWORD = ?',
+                  (self.uname, self.password))
+        data = c.fetchone()
+        if data == None:
+            return None
+        print(data)
+        c.execute('SELECT UTYPE, UPREF FROM USER_DETAIL WHERE USERNAME = ?', (self.uname,))
+        utype = c.fetchone()
+        conn.close()
+        print("utype = ", utype)
+        print(type(utype))
+        print(utype[0], utype[1])
+        return utype
 
     def signup(self):
         pass
@@ -77,3 +93,7 @@ class Learner(User):
         complete = query.exec_()
         db.close()
         return complete
+
+class Organiser(User):
+    def __init__(self, uname):
+        super().__init__(uname)

@@ -3,8 +3,6 @@ import sqlite3
 
 class LoginSystem(object):
     def __init__(self, username, password):
-        # conn = sqlite3.connect('../upskilldb.sqlite3')
-        # c = conn.cursor()
         self.username = username
         self.password = password
         self.type = None
