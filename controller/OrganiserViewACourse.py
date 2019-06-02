@@ -1,6 +1,6 @@
 import sys
 
-from screen.PunpunViewallcourses import Ui_Form
+from screen.PunpunViewAllcourses import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
