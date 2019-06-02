@@ -9,7 +9,7 @@ from backend.course import *
 
 
 class LrnConfirmCancel(QWidget):
-    def __init__(self,OrganiserMenuWindow):
+    def __init__(self,OrganiserMenuWindow, learner):
         QWidget.__init__(self, None)
         self.orgmenuWindow = OrganiserMenuWindow
         layout = QVBoxLayout()
@@ -19,15 +19,19 @@ class LrnConfirmCancel(QWidget):
         self.ui.setupUi(self)
         self.ui.back.clicked.connect(self.goback)
         self.ui.deleted.clicked.connect(self.removed)
+        self.learner = learner
 
     def goback(self):
         self.hide()
         self.orgmenuWindow.show()
 
     def removed(self):
-        self.hide()
-        self.orgmenuWindow.getCourses()
-        self.orgmenuWindow.show()
+        removed_course = self.ui.lineEdit.text()
+        isCompleteRemove = self.learner.cancelEnrollment(removed_course)
+        if isCompleteRemove :
+            self.hide()
+            self.orgmenuWindow.getCourses()
+            self.orgmenuWindow.show()
 
 
 if __name__ == '__main__':

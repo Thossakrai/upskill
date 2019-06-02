@@ -54,7 +54,7 @@ class Learner(User):
         db.close()
         return complete
 
-    def viewEnrolledCourses(self):
+    def getEnrolledCourses(self):
         db = QSqlDatabase("QSQLITE")
         db.setDatabaseName("/Users/thossakrai/PycharmProjects/upskill/upskilldb.sqlite3")
         db.open()
@@ -65,3 +65,15 @@ class Learner(User):
         query.exec_()
         modal.setQuery(query)
         return modal
+
+    def cancelEnrollment(self, course_title):
+        db = QSqlDatabase("QSQLITE")
+        db.setDatabaseName("/Users/thossakrai/PycharmProjects/upskill/upskilldb.sqlite3")
+        db.open()
+        query = QSqlQuery(db)
+        query.prepare("DELETE FROM ENROLLMENT WHERE L_UNAME = ?  AND C_TITLE = ?")
+        query.addBindValue(self.uname)
+        query.addBindValue(course_title)
+        complete = query.exec_()
+        db.close()
+        return complete
