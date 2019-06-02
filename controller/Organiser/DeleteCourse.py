@@ -1,13 +1,10 @@
 import sys
-
-from controller.OrgConfirmDelCourse import OrgConfirmDelete
-# from screen.OrgDeleteCourse import Ui_Form
-from screen.DeleteCourse import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
-from PySide2.QtMultimedia import QSound
-#from OrganiserViewACourse import *
+
+from controller.Organiser.OrgConfirmDelCourse import OrgConfirmDelete
+from screen.DeleteCourse import Ui_Form
 from backend.course import *
 
 

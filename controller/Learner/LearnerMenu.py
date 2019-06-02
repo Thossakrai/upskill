@@ -1,13 +1,12 @@
 import sys
-
-from controller.LearnerSearchMenu import LrnSearch
-from controller.LearnerProfile import LrnProfile
-from controller.LearnerViewEnrolledCourse import LrnViewEnrolled
-from screen.LrnMenu import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
-from PySide2.QtMultimedia import QSound
+
+from controller.Learner.LearnerSearchMenu import LrnSearch
+from controller.Learner.LearnerProfile import LrnProfile
+from controller.Learner.LearnerViewEnrolledCourse import LrnViewEnrolled
+from screen.LrnMenu import Ui_Form
 from backend.User import *
 
 

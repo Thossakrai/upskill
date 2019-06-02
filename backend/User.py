@@ -26,8 +26,15 @@ class User:
         print(utype[0], utype[1])
         return utype
 
-    def signup(self):
-        pass
+    def signup(self, fname, lname, birthdate, gender, uname, pw, phone, email, upref, utype):
+        conn = sqlite3.connect('upskilldb.sqlite3')
+        c = conn.cursor()
+        values = (fname, lname, birthdate, uname, phone, email, utype, upref, gender,)
+        c.execute('INSERT INTO USER_DETAIL VALUES(?,?,?,?,?,?,?,?,?)', values)
+        c.execute('INSERT INTO USERNAME_DETAIL VALUES(?,?)', (uname, pw,))
+        conn.commit()
+        conn.close()
+        return True
 
     def getUserInfo(self):
         db = QSqlDatabase("QSQLITE")

@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'NewCourse.ui',
 # licensing of 'NewCourse.ui' applies.
 #
-# Created: Wed May 29 18:03:39 2019
+# Created: Mon Jun  3 02:22:30 2019
 #      by: pyside2-uic  running on PySide2 5.12.0
 #
 # WARNING! All changes made in this file will be lost!
@@ -60,9 +60,6 @@ class Ui_Form(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.ToolTipText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0, 128))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.PlaceholderText, brush)
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.WindowText, brush)
@@ -108,9 +105,6 @@ class Ui_Form(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.ToolTipText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0, 128))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.PlaceholderText, brush)
         brush = QtGui.QBrush(QtGui.QColor(110, 127, 85))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.WindowText, brush)
@@ -156,24 +150,52 @@ class Ui_Form(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.ToolTipText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0, 128))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.PlaceholderText, brush)
         Form.setPalette(palette)
         self.widget = QtWidgets.QWidget(Form)
         self.widget.setGeometry(QtCore.QRect(0, 0, 1081, 721))
+        self.widget.setStyleSheet("background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:0.731343, y2:0.778, stop:0 rgba(150, 165, 220, 255), stop:1 rgba(255, 255, 255, 255));")
         self.widget.setObjectName("widget")
         self.back = QtWidgets.QPushButton(self.widget)
         self.back.setGeometry(QtCore.QRect(20, 580, 461, 111))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.back.setFont(font)
+        self.back.setStyleSheet("\n"
+"QPushButton{\n"
+"color: #black;\n"
+"background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 white, stop: 1 #FFE9AD);\n"
+"border-style: solid;\n"
+"border-color: black;\n"
+"border-width: 1.5px;\n"
+"border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover:!pressed\n"
+"{\n"
+"  border: 1.5px solid black;\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #B39A56, stop: 1 #FFE9AD);\n"
+"}\n"
+"")
         self.back.setObjectName("back")
         self.save = QtWidgets.QPushButton(self.widget)
         self.save.setGeometry(QtCore.QRect(580, 580, 461, 111))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.save.setFont(font)
+        self.save.setStyleSheet("\n"
+"QPushButton{\n"
+"color: #black;\n"
+"background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 white, stop: 1 #FFE9AD);\n"
+"border-style: solid;\n"
+"border-color: black;\n"
+"border-width: 1.5px;\n"
+"border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover:!pressed\n"
+"{\n"
+"  border: 1.5px solid black;\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #B39A56, stop: 1 #FFE9AD);\n"
+"}\n"
+"")
         self.save.setObjectName("save")
         self.label = QtWidgets.QLabel(self.widget)
         self.label.setGeometry(QtCore.QRect(30, 10, 1011, 61))
@@ -182,6 +204,7 @@ class Ui_Form(object):
         font.setWeight(75)
         font.setBold(True)
         self.label.setFont(font)
+        self.label.setStyleSheet("background-color: transparent;")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.label_6 = QtWidgets.QLabel(self.widget)
@@ -189,18 +212,21 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.label_6.setFont(font)
+        self.label_6.setStyleSheet("background-color: transparent;")
         self.label_6.setObjectName("label_6")
         self.label_5 = QtWidgets.QLabel(self.widget)
         self.label_5.setGeometry(QtCore.QRect(50, 310, 151, 40))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.label_5.setFont(font)
+        self.label_5.setStyleSheet("background-color: transparent;")
         self.label_5.setObjectName("label_5")
         self.details = QtWidgets.QLineEdit(self.widget)
         self.details.setGeometry(QtCore.QRect(200, 430, 791, 141))
         font = QtGui.QFont()
         font.setPointSize(15)
         self.details.setFont(font)
+        self.details.setStyleSheet("background-color: white;")
         self.details.setText("")
         self.details.setObjectName("details")
         self.speaker = QtWidgets.QLineEdit(self.widget)
@@ -208,6 +234,7 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setPointSize(15)
         self.speaker.setFont(font)
+        self.speaker.setStyleSheet("background-color: white;")
         self.speaker.setText("")
         self.speaker.setObjectName("speaker")
         self.tag = QtWidgets.QLineEdit(self.widget)
@@ -215,6 +242,7 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setPointSize(15)
         self.tag.setFont(font)
+        self.tag.setStyleSheet("background-color: white;")
         self.tag.setText("")
         self.tag.setObjectName("tag")
         self.label_2 = QtWidgets.QLabel(self.widget)
@@ -222,22 +250,30 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.label_2.setFont(font)
+        self.label_2.setStyleSheet("background-color: transparent;")
         self.label_2.setObjectName("label_2")
         self.label_7 = QtWidgets.QLabel(self.widget)
         self.label_7.setGeometry(QtCore.QRect(50, 430, 151, 41))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.label_7.setFont(font)
+        self.label_7.setStyleSheet("background-color: transparent;")
         self.label_7.setObjectName("label_7")
         self.label_8 = QtWidgets.QLabel(self.widget)
         self.label_8.setGeometry(QtCore.QRect(50, 250, 151, 41))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.label_8.setFont(font)
+        self.label_8.setStyleSheet("background-color: transparent;")
         self.label_8.setObjectName("label_8")
         self.type = QtWidgets.QComboBox(self.widget)
         self.type.setGeometry(QtCore.QRect(200, 370, 791, 51))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.type.setFont(font)
+        self.type.setStyleSheet("background-color: white;")
         self.type.setObjectName("type")
+        self.type.addItem("")
         self.type.addItem("")
         self.type.addItem("")
         self.type.addItem("")
@@ -263,18 +299,21 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.label_4.setFont(font)
+        self.label_4.setStyleSheet("background-color: transparent;")
         self.label_4.setObjectName("label_4")
         self.datetime = QtWidgets.QDateTimeEdit(self.widget)
         self.datetime.setGeometry(QtCore.QRect(200, 200, 231, 41))
         font = QtGui.QFont()
         font.setPointSize(15)
         self.datetime.setFont(font)
+        self.datetime.setStyleSheet("background-color: white;")
         self.datetime.setObjectName("datetime")
         self.location = QtWidgets.QLineEdit(self.widget)
         self.location.setGeometry(QtCore.QRect(200, 250, 791, 51))
         font = QtGui.QFont()
         font.setPointSize(15)
         self.location.setFont(font)
+        self.location.setStyleSheet("background-color: white;")
         self.location.setText("")
         self.location.setObjectName("location")
         self.title = QtWidgets.QLineEdit(self.widget)
@@ -282,6 +321,7 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setPointSize(15)
         self.title.setFont(font)
+        self.title.setStyleSheet("background-color: white;")
         self.title.setText("")
         self.title.setObjectName("title")
         self.label_3 = QtWidgets.QLabel(self.widget)
@@ -289,6 +329,7 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.label_3.setFont(font)
+        self.label_3.setStyleSheet("background-color: transparent;")
         self.label_3.setObjectName("label_3")
 
         self.retranslateUi(Form)
@@ -320,10 +361,11 @@ class Ui_Form(object):
         self.type.setItemText(13, QtWidgets.QApplication.translate("Form", "Photography", None, -1))
         self.type.setItemText(14, QtWidgets.QApplication.translate("Form", "Science", None, -1))
         self.type.setItemText(15, QtWidgets.QApplication.translate("Form", "Sport", None, -1))
-        self.type.setItemText(16, QtWidgets.QApplication.translate("Form", "Outdoor", None, -1))
-        self.type.setItemText(17, QtWidgets.QApplication.translate("Form", "Volunteer", None, -1))
-        self.type.setItemText(18, QtWidgets.QApplication.translate("Form", "Yoga", None, -1))
-        self.type.setItemText(19, QtWidgets.QApplication.translate("Form", "Zen", None, -1))
+        self.type.setItemText(16, QtWidgets.QApplication.translate("Form", "Technology", None, -1))
+        self.type.setItemText(17, QtWidgets.QApplication.translate("Form", "Outdoor", None, -1))
+        self.type.setItemText(18, QtWidgets.QApplication.translate("Form", "Volunteer", None, -1))
+        self.type.setItemText(19, QtWidgets.QApplication.translate("Form", "Yoga", None, -1))
+        self.type.setItemText(20, QtWidgets.QApplication.translate("Form", "Zen", None, -1))
         self.label_4.setText(QtWidgets.QApplication.translate("Form", "Date/Time", None, -1))
         self.label_3.setText(QtWidgets.QApplication.translate("Form", "Course Speaker", None, -1))
 

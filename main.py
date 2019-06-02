@@ -1,15 +1,13 @@
 import sys
-
-from controller.LearnerMenu import LearnerMenu
-from controller.Register import Register
-from screen.signin import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
-from backend.loginsystem import *
-from controller.OrganiserMenu import OrganiserMenu
+
+from controller.Learner.LearnerMenu import LearnerMenu
+from controller.Register import Register
+from controller.Organiser.OrganiserMenu import OrganiserMenu
+from screen.signin import Ui_Form
 from backend.User import *
-from PySide2.QtMultimedia import QSound
 
 
 class LoginUI(QWidget):
@@ -25,7 +23,6 @@ class LoginUI(QWidget):
         self.ui.pushButton.clicked.connect(self.Login)
 
     def Login(self):
-        # self.loginsystem = LoginSystem(self.ui.lineEdit.text(), self.ui.lineEdit_2.text())
         uname = self.ui.lineEdit.text()
         pw = self.ui.lineEdit_2.text()
         self.user = User(uname, pw)

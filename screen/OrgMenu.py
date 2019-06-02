@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'Menu.ui',
 # licensing of 'Menu.ui' applies.
 #
-# Created: Thu May 30 13:36:53 2019
+# Created: Mon Jun  3 02:09:02 2019
 #      by: pyside2-uic  running on PySide2 5.12.0
 #
 # WARNING! All changes made in this file will be lost!
@@ -20,8 +20,12 @@ class Ui_Form(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.WindowText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 169))
-        brush.setStyle(QtCore.Qt.SolidPattern)
+        gradient = QtGui.QLinearGradient(0.0, 0.0, 0.472, 0.539545)
+        gradient.setSpread(QtGui.QGradient.RepeatSpread)
+        gradient.setCoordinateMode(QtGui.QGradient.ObjectBoundingMode)
+        gradient.setColorAt(0.0, QtGui.QColor(150, 165, 220))
+        gradient.setColorAt(1.0, QtGui.QColor(255, 255, 255))
+        brush = QtGui.QBrush(gradient)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Button, brush)
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -44,11 +48,19 @@ class Ui_Form(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.ButtonText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
+        gradient = QtGui.QLinearGradient(0.0, 0.0, 0.472, 0.539545)
+        gradient.setSpread(QtGui.QGradient.RepeatSpread)
+        gradient.setCoordinateMode(QtGui.QGradient.ObjectBoundingMode)
+        gradient.setColorAt(0.0, QtGui.QColor(150, 165, 220))
+        gradient.setColorAt(1.0, QtGui.QColor(255, 255, 255))
+        brush = QtGui.QBrush(gradient)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Base, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 169))
-        brush.setStyle(QtCore.Qt.SolidPattern)
+        gradient = QtGui.QLinearGradient(0.0, 0.0, 0.472, 0.539545)
+        gradient.setSpread(QtGui.QGradient.RepeatSpread)
+        gradient.setCoordinateMode(QtGui.QGradient.ObjectBoundingMode)
+        gradient.setColorAt(0.0, QtGui.QColor(150, 165, 220))
+        gradient.setColorAt(1.0, QtGui.QColor(255, 255, 255))
+        brush = QtGui.QBrush(gradient)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Window, brush)
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -62,14 +74,15 @@ class Ui_Form(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.ToolTipText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0, 128))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.PlaceholderText, brush)
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.WindowText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 169))
-        brush.setStyle(QtCore.Qt.SolidPattern)
+        gradient = QtGui.QLinearGradient(0.0, 0.0, 0.472, 0.539545)
+        gradient.setSpread(QtGui.QGradient.RepeatSpread)
+        gradient.setCoordinateMode(QtGui.QGradient.ObjectBoundingMode)
+        gradient.setColorAt(0.0, QtGui.QColor(150, 165, 220))
+        gradient.setColorAt(1.0, QtGui.QColor(255, 255, 255))
+        brush = QtGui.QBrush(gradient)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Button, brush)
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -92,11 +105,19 @@ class Ui_Form(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.ButtonText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
-        brush.setStyle(QtCore.Qt.SolidPattern)
+        gradient = QtGui.QLinearGradient(0.0, 0.0, 0.472, 0.539545)
+        gradient.setSpread(QtGui.QGradient.RepeatSpread)
+        gradient.setCoordinateMode(QtGui.QGradient.ObjectBoundingMode)
+        gradient.setColorAt(0.0, QtGui.QColor(150, 165, 220))
+        gradient.setColorAt(1.0, QtGui.QColor(255, 255, 255))
+        brush = QtGui.QBrush(gradient)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Base, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 169))
-        brush.setStyle(QtCore.Qt.SolidPattern)
+        gradient = QtGui.QLinearGradient(0.0, 0.0, 0.472, 0.539545)
+        gradient.setSpread(QtGui.QGradient.RepeatSpread)
+        gradient.setCoordinateMode(QtGui.QGradient.ObjectBoundingMode)
+        gradient.setColorAt(0.0, QtGui.QColor(150, 165, 220))
+        gradient.setColorAt(1.0, QtGui.QColor(255, 255, 255))
+        brush = QtGui.QBrush(gradient)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Window, brush)
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -110,14 +131,15 @@ class Ui_Form(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.ToolTipText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0, 128))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.PlaceholderText, brush)
         brush = QtGui.QBrush(QtGui.QColor(127, 127, 84))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.WindowText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 169))
-        brush.setStyle(QtCore.Qt.SolidPattern)
+        gradient = QtGui.QLinearGradient(0.0, 0.0, 0.472, 0.539545)
+        gradient.setSpread(QtGui.QGradient.RepeatSpread)
+        gradient.setCoordinateMode(QtGui.QGradient.ObjectBoundingMode)
+        gradient.setColorAt(0.0, QtGui.QColor(150, 165, 220))
+        gradient.setColorAt(1.0, QtGui.QColor(255, 255, 255))
+        brush = QtGui.QBrush(gradient)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Button, brush)
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -140,11 +162,19 @@ class Ui_Form(object):
         brush = QtGui.QBrush(QtGui.QColor(127, 127, 84))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.ButtonText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 169))
-        brush.setStyle(QtCore.Qt.SolidPattern)
+        gradient = QtGui.QLinearGradient(0.0, 0.0, 0.472, 0.539545)
+        gradient.setSpread(QtGui.QGradient.RepeatSpread)
+        gradient.setCoordinateMode(QtGui.QGradient.ObjectBoundingMode)
+        gradient.setColorAt(0.0, QtGui.QColor(150, 165, 220))
+        gradient.setColorAt(1.0, QtGui.QColor(255, 255, 255))
+        brush = QtGui.QBrush(gradient)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Base, brush)
-        brush = QtGui.QBrush(QtGui.QColor(255, 255, 169))
-        brush.setStyle(QtCore.Qt.SolidPattern)
+        gradient = QtGui.QLinearGradient(0.0, 0.0, 0.472, 0.539545)
+        gradient.setSpread(QtGui.QGradient.RepeatSpread)
+        gradient.setCoordinateMode(QtGui.QGradient.ObjectBoundingMode)
+        gradient.setColorAt(0.0, QtGui.QColor(150, 165, 220))
+        gradient.setColorAt(1.0, QtGui.QColor(255, 255, 255))
+        brush = QtGui.QBrush(gradient)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Window, brush)
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -158,49 +188,136 @@ class Ui_Form(object):
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.ToolTipText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0, 128))
-        brush.setStyle(QtCore.Qt.SolidPattern)
-        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.PlaceholderText, brush)
         self.widget.setPalette(palette)
-        self.widget.setAutoFillBackground(True)
+        self.widget.setAutoFillBackground(False)
+        self.widget.setStyleSheet("background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:0.472, y2:0.539545, stop:0 rgba(150, 165, 220, 255), stop:1 rgba(255, 255, 255, 255));")
         self.widget.setObjectName("widget")
         self.logout = QtWidgets.QPushButton(self.widget)
         self.logout.setGeometry(QtCore.QRect(690, 50, 271, 231))
         font = QtGui.QFont()
-        font.setPointSize(30)
+        font.setPointSize(25)
         self.logout.setFont(font)
+        self.logout.setStyleSheet("QPushButton{\n"
+"color: #black;\n"
+"background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 white, stop: 1 #FFE9AD);\n"
+"border-style: solid;\n"
+"border-color: black;\n"
+"border-width: 1.5px;\n"
+"border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover:!pressed\n"
+"{\n"
+"  border: 1.5px solid black;\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #B39A56, stop: 1 #FFE9AD);\n"
+"}\n"
+"\n"
+"")
         self.logout.setObjectName("logout")
         self.profile = QtWidgets.QPushButton(self.widget)
         self.profile.setGeometry(QtCore.QRect(90, 50, 271, 231))
         font = QtGui.QFont()
-        font.setPointSize(30)
+        font.setPointSize(25)
         self.profile.setFont(font)
-        self.profile.setAutoFillBackground(True)
-        self.profile.setStyleSheet("font:setStyleSheet(\"color: white;\")")
+        self.profile.setAutoFillBackground(False)
+        self.profile.setStyleSheet("QPushButton{\n"
+"color: #black;\n"
+"background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 white, stop: 1 #FFE9AD);\n"
+"border-style: solid;\n"
+"border-color: black;\n"
+"border-width: 1.5px;\n"
+"border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover:!pressed\n"
+"{\n"
+"  border: 1.5px solid black;\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #B39A56, stop: 1 #FFE9AD);\n"
+"}\n"
+"\n"
+"")
         self.profile.setObjectName("profile")
         self.check = QtWidgets.QPushButton(self.widget)
         self.check.setGeometry(QtCore.QRect(40, 330, 491, 151))
         font = QtGui.QFont()
-        font.setPointSize(30)
+        font.setPointSize(25)
         self.check.setFont(font)
+        self.check.setStyleSheet("QPushButton{\n"
+"color: #black;\n"
+"background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 white, stop: 1 #FFE9AD);\n"
+"border-style: solid;\n"
+"border-color: black;\n"
+"border-width: 1.5px;\n"
+"border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover:!pressed\n"
+"{\n"
+"  border: 1.5px solid black;\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #B39A56, stop: 1 #FFE9AD);\n"
+"}\n"
+"\n"
+"")
         self.check.setObjectName("check")
         self.create = QtWidgets.QPushButton(self.widget)
         self.create.setGeometry(QtCore.QRect(40, 520, 491, 151))
         font = QtGui.QFont()
-        font.setPointSize(30)
+        font.setPointSize(25)
         self.create.setFont(font)
+        self.create.setStyleSheet("QPushButton{\n"
+"color: #black;\n"
+"background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 white, stop: 1 #FFE9AD);\n"
+"border-style: solid;\n"
+"border-color: black;\n"
+"border-width: 1.5px;\n"
+"border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover:!pressed\n"
+"{\n"
+"  border: 1.5px solid black;\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #B39A56, stop: 1 #FFE9AD);\n"
+"}\n"
+"\n"
+"")
         self.create.setObjectName("create")
         self.display = QtWidgets.QPushButton(self.widget)
         self.display.setGeometry(QtCore.QRect(550, 330, 491, 151))
         font = QtGui.QFont()
-        font.setPointSize(30)
+        font.setPointSize(25)
         self.display.setFont(font)
+        self.display.setStyleSheet("QPushButton{\n"
+"color: #black;\n"
+"background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 white, stop: 1 #FFE9AD);\n"
+"border-style: solid;\n"
+"border-color: black;\n"
+"border-width: 1.5px;\n"
+"border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover:!pressed\n"
+"{\n"
+"  border: 1.5px solid black;\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #B39A56, stop: 1 #FFE9AD);\n"
+"}\n"
+"\n"
+"")
         self.display.setObjectName("display")
         self.delete_2 = QtWidgets.QPushButton(self.widget)
         self.delete_2.setGeometry(QtCore.QRect(550, 520, 491, 151))
         font = QtGui.QFont()
-        font.setPointSize(30)
+        font.setPointSize(25)
         self.delete_2.setFont(font)
+        self.delete_2.setStyleSheet("QPushButton{\n"
+"color: #black;\n"
+"background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 white, stop: 1 #FFE9AD);\n"
+"border-style: solid;\n"
+"border-color: black;\n"
+"border-width: 1.5px;\n"
+"border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover:!pressed\n"
+"{\n"
+"  border: 1.5px solid black;\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #B39A56, stop: 1 #FFE9AD);\n"
+"}\n"
+"\n"
+"")
         self.delete_2.setObjectName("delete_2")
         self.label_6 = QtWidgets.QLabel(self.widget)
         self.label_6.setGeometry(QtCore.QRect(390, 160, 271, 151))
@@ -212,7 +329,8 @@ class Ui_Form(object):
         font.setBold(True)
         self.label_6.setFont(font)
         self.label_6.setStyleSheet("QLabel {\n"
-"color: rgb(0, 255, 150);\n"
+"color:#8F7B45;\n"
+"background-color: transparent;\n"
 "}")
         self.label_6.setObjectName("label_6")
         self.label_5 = QtWidgets.QLabel(self.widget)
@@ -226,7 +344,8 @@ class Ui_Form(object):
         self.label_5.setFont(font)
         self.label_5.setAutoFillBackground(False)
         self.label_5.setStyleSheet("QLabel {\n"
-"color: rgb(0, 255, 150);\n"
+"color: #8F7B45;\n"
+"background-color: transparent;\n"
 "}")
         self.label_5.setObjectName("label_5")
 

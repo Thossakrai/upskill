@@ -1,15 +1,14 @@
 import sys
-
-from controller.OrgUpdateProfile import OrgImproveProfile
-from screen.LrnProfile import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
-from PySide2.QtMultimedia import QSound
+
+from controller.Organiser.OrgUpdateProfile import OrgImproveProfile
+from screen.LrnProfile import Ui_Form
 
 
 class LrnProfile(QWidget):
-    def __init__(self,LearnerViewEnrolledCourseWindow, learner):
+    def __init__(self, LearnerViewEnrolledCourseWindow, learner):
         QWidget.__init__(self, None)
         self.viewenrolledWindow = LearnerViewEnrolledCourseWindow
         layout = QVBoxLayout()
@@ -36,7 +35,7 @@ class LrnProfile(QWidget):
         firstname = self.user_info.record(0).value("FNAME")
         lastname = self.user_info.record(0).value("LNAME")
         # birthdate = self.user_info.record(0).value("BIRTHDATE")
-        username= self.user_info.record(0).value("USERNAME")
+        username = self.user_info.record(0).value("USERNAME")
         phone = self.user_info.record(0).value("PHONE")
         mail = self.user_info.record(0).value("EMAIL")
         utype = self.user_info.record(0).value("UTYPE")

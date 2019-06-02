@@ -1,12 +1,12 @@
 import sys
-
-from controller.LearnerConfirmCancel import LrnConfirmCancel
-from controller.LearnerEditPref import LrnEditPref
-from screen.viewallenrollment import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
-from PySide2.QtMultimedia import QSound
+
+from controller.Learner.LearnerConfirmCancel import LrnConfirmCancel
+from controller.Learner.LearnerEditPref import LrnEditPref
+from screen.viewallenrollment import Ui_Form
+
 
 
 class LrnViewEnrolled(QWidget):

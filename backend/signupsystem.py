@@ -17,7 +17,6 @@ class SignUpSystem :
         conn = sqlite3.connect('upskilldb.sqlite3')
         c = conn.cursor()
         values = (self.fname, self.lname, self.birthdate, self.uname, self.phone, self.email, self.utype, self.upref, self.gender, )
-        # values = ("x", "x", "x", "xxxxxxaaaa", "x", "x", "x", "x", )
         c.execute('INSERT INTO USER_DETAIL VALUES(?,?,?,?,?,?,?,?,?)', values)
         c.execute('INSERT INTO USERNAME_DETAIL VALUES(?,?)', (self.uname, self.password, ))
         conn.commit()

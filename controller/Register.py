@@ -1,11 +1,11 @@
 import sys
-
-from screen.orgreg import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
+
+from screen.orgreg import Ui_Form
 from backend.signupsystem import *
-from PySide2.QtMultimedia import QSound
+from backend.User import *
 
 
 class Register(QWidget):
@@ -26,19 +26,19 @@ class Register(QWidget):
         self.mainWindow.show()
 
     def SignUp(self):
+        self.user = User()
+
         fname = self.ui.Fname.text()
         lname = self.ui.Lname.text()
         birthdate = self.ui.Date.text()
         gender = self.ui.Sex.currentText()
-        print(gender)
         uname = self.ui.User.text()
         phone = self.ui.User_2.text()
         email = self.ui.User_3.text()
         upref = self.ui.type.currentText()
         pw = self.ui.Password.text()
-        self.signupsystem = SignUpSystem(fname, lname, birthdate, gender, uname, pw, phone, email, upref, self.utype)
-        signup = self.signupsystem.signup()
-        if signup :
+        signup = self.user.signup(fname, lname, birthdate, gender, uname, pw, phone, email, upref, self.utype)
+        if  signup :
             self.hide()
             self.mainWindow.show()
 
