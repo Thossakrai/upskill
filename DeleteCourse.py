@@ -6,7 +6,7 @@ from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
 from PySide2.QtMultimedia import QSound
-from OrganiserViewACourse import *
+#from OrganiserViewACourse import *
 from backend.course import *
 
 
@@ -20,10 +20,10 @@ class OrgDelete(QWidget):
         self.setWindowTitle("Menu")
         self.ui = Ui_Form()
         self.ui.setupUi(self)
-        # self.ui.back.clicked.connect(self.goback)
+        self.ui.back.clicked.connect(self.goback)
         self.course = Course()
         self.getCourses()
-        #self.ui.deleted.clicked.connect(self.godelete)
+        self.ui.deleted.clicked.connect(self.godelete)
 
     def goback(self):
         self.hide()

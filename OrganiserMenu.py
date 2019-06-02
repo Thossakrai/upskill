@@ -12,20 +12,24 @@ from PySide2.QtMultimedia import QSound
 
 
 class OrganiserMenu(QWidget):
-    def __init__(self, uname):
+    def __init__(self, mainWindow, uname, upref):
         QWidget.__init__(self, None)
         layout = QVBoxLayout()
+        self.mainWindows = mainWindow
         self.uname = uname
         self.setLayout(layout)
         self.setWindowTitle("Menu")
         self.ui = Ui_Form()
         self.ui.setupUi(self)
+        self.ui.logout.clicked.connect(self.Logout)
         self.ui.profile.clicked.connect(self.Profile)
         self.ui.create.clicked.connect(self.CreateCourse)
         self.ui.display.clicked.connect(self.OrgViewAll)
         self.ui.delete_2.clicked.connect(self.OrgDel)
 
-
+    def Logout(self):
+        self.hide()
+        self.mainWindows.show()
 
     def Profile(self):
         self.hide()
