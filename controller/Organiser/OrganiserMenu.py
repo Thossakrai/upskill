@@ -4,6 +4,7 @@ from controller.Organiser.DeleteCourse import OrgDelete
 from controller.Organiser.OrganiserViewACourse import OrgViewAll
 from controller.Organiser.CreateCourses import OrgCreate
 from controller.Organiser.Org_ViewProfile import OrgProfile
+from backend.User import *
 from screen.OrgMenu import Ui_Form
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
@@ -27,6 +28,7 @@ class OrganiserMenu(QWidget):
         self.ui.create.clicked.connect(self.CreateCourse)
         self.ui.display.clicked.connect(self.OrgViewAll)
         self.ui.delete_2.clicked.connect(self.OrgDel)
+        self.org = Organiser(uname)
 
     def Logout(self):
         self.hide()
@@ -34,22 +36,22 @@ class OrganiserMenu(QWidget):
 
     def Profile(self):
         self.hide()
-        self.prof = OrgProfile(self)
+        self.prof = OrgProfile(self, self.org)
         self.prof.show()
 
     def CreateCourse(self):
         self.hide()
-        self.create = OrgCreate(self, self.uname)
+        self.create = OrgCreate(self, self.org)
         self.create.show()
 
     def OrgViewAll(self):
         self.hide()
-        self.viewall = OrgViewAll(self, self.uname)
+        self.viewall = OrgViewAll(self, self.org)
         self.viewall.show()
 
     def OrgDel(self):
         self.hide()
-        self.eliminate = OrgDelete(self, self.uname)
+        self.eliminate = OrgDelete(self, self.org)
         self.eliminate.show()
 
 

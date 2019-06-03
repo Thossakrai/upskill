@@ -9,13 +9,13 @@ from backend.course import *
 
 
 class OrgConfirmDelete(QWidget):
-    def __init__(self,OrganiserMenuWindow, uname):
+    def __init__(self,OrganiserMenuWindow, org):
         QWidget.__init__(self, None)
         self.orgmenuWindow = OrganiserMenuWindow
         layout = QVBoxLayout()
         self.setLayout(layout)
         self.setWindowTitle("Menu")
-        self.uname = uname
+        self.org = org
         self.ui = Ui_Form()
         self.ui.setupUi(self)
         self.ui.back.clicked.connect(self.goback)
@@ -26,9 +26,8 @@ class OrgConfirmDelete(QWidget):
         self.orgmenuWindow.show()
 
     def removed(self):
-        self.c = Course()
         self.course_title = self.ui.lineEdit.text()
-        self.c.deleteCourse(self.uname, self.course_title)
+        self.org.deleteCourse(self.course_title)
         self.hide()
         self.orgmenuWindow.getCourses()
         self.orgmenuWindow.show()

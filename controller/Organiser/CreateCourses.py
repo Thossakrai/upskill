@@ -7,13 +7,14 @@ from PySide2.QtGui import *
 import sqlite3
 from PySide2.QtMultimedia import QSound
 from backend.course import *
+from backend.User import *
 
 
 class OrgCreate(QWidget):
-    def __init__(self,OrganiserMenuWindow, uname):
+    def __init__(self,OrganiserMenuWindow, org):
         QWidget.__init__(self, None)
         self.orgmenuWindow = OrganiserMenuWindow
-        self.uname =  uname
+        self.org =  org
         layout = QVBoxLayout()
         self.setLayout(layout)
         self.setWindowTitle("Menu")
@@ -36,8 +37,7 @@ class OrgCreate(QWidget):
         self.tag = self.ui.tag.text()
         self.type = self.ui.type.currentText()
         self.details = self.ui.details.text()
-        self.course = Course()
-        created = self.course.createCourse(self.title, self.speaker, self.dateline, self.location, self.tag, self.type, self.details, self.uname)
+        created = self.org.createCourse(self.title, self.speaker, self.dateline, self.location, self.tag, self.type, self.details)
         if created :
             self.hide()
             self.orgmenuWindow.show()

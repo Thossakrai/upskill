@@ -104,3 +104,47 @@ class Learner(User):
 class Organiser(User):
     def __init__(self, uname):
         super().__init__(uname)
+
+
+    def createCourse(self, title, speaker, dateline, loc, tag, ctype, details):
+        conn = sqlite3.connect('upskilldb.sqlite3')
+        c = conn.cursor()
+        values = (title, speaker, dateline, loc, tag, ctype, details, self.uname,)
+        print(values)
+        c.execute('INSERT INTO COURSES VALUES(?,?,?,?,?,?,?,?)', values)
+        conn.commit()
+        conn.close()
+        return True
+
+    def viewCourse(self):
+        db = QSqlDatabase.addDatabase("QSQLITE")
+        db.setDatabaseName("/Users/thossakrai/PycharmProjects/upskill/upskilldb.sqlite3")
+        isOpened = db.open()
+        print("valid  = ", db.isValid())
+
+        print("database success to connect")
+        modal = QSqlQueryModel()
+        query = QSqlQuery(db)
+
+
+        query.prepare("SELECT TITLE, SPEAKER, DATETIME, LOCATION, CTYPE ,  DETAIL FROM COURSES WHERE UNAME = ? ")
+
+        query.addBindValue(self.uname)
+        count = 0
+        if query.exec_():
+            while query.next():
+                count += 1
+                print(query.value(0))
+        print(count)
+        modal.setQuery(query)
+        db.close()
+        return modal
+
+
+    def deleteCourse(self, title):
+        conn = sqlite3.connect('upskilldb.sqlite3')
+        c = conn.cursor()
+        print("Pass to the function = ", self.uname, title)
+        c.execute('DELETE FROM COURSES WHERE UNAME = ? AND TITLE = ?', (self.uname, title, ))
+        conn.commit()
+        conn.close()

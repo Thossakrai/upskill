@@ -11,7 +11,7 @@ from screen.viewprofileorg import Ui_Form
 
 
 class OrgProfile(QWidget):
-    def __init__(self,OrganiserMenuWindow):
+    def __init__(self,OrganiserMenuWindow, org):
         QWidget.__init__(self, None)
         self.orgmenuWindow = OrganiserMenuWindow
         layout = QVBoxLayout()
@@ -21,6 +21,7 @@ class OrgProfile(QWidget):
         self.ui.setupUi(self)
         self.ui.pushButton_2.clicked.connect(self.goback)
         self.ui.pushButton_3.clicked.connect(self.edit)
+        self.org = org
 
     def goback(self):
         self.hide()

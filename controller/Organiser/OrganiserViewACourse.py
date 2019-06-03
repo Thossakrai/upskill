@@ -9,10 +9,10 @@ from backend.course import Course
 
 
 class OrgViewAll(QWidget):
-    def __init__(self,OrganiserMenuWindow, uname):
+    def __init__(self,OrganiserMenuWindow, org):
         QWidget.__init__(self, None)
         self.orgmenuWindow = OrganiserMenuWindow
-        self.uname = uname
+        self.org = org
         layout = QVBoxLayout()
         self.setLayout(layout)
         self.setWindowTitle("Menu")
@@ -28,19 +28,18 @@ class OrgViewAll(QWidget):
         self.orgmenuWindow.show()
 
 
-    def getCourses(self, ):
-        self.course = Course()
+    def getCourses(self):
         ##return all courses that user creted
-        self.courses = self.course.viewCourse(self.uname)
+        self.courses = self.org.viewCourse()
         print(self.courses)
         self.updateUI(self.courses)
         return self.courses
 
 
-
     def updateUI(self, courses):
         self.ui.tableView.setModel(courses)
         self.ui.tableView.show()
+
 
 
 
