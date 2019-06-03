@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'Menu.ui',
 # licensing of 'Menu.ui' applies.
 #
-# Created: Mon Jun  3 02:09:02 2019
+# Created: Mon Jun  3 10:26:32 2019
 #      by: pyside2-uic  running on PySide2 5.12.0
 #
 # WARNING! All changes made in this file will be lost!
@@ -235,27 +235,6 @@ class Ui_Form(object):
 "\n"
 "")
         self.profile.setObjectName("profile")
-        self.check = QtWidgets.QPushButton(self.widget)
-        self.check.setGeometry(QtCore.QRect(40, 330, 491, 151))
-        font = QtGui.QFont()
-        font.setPointSize(25)
-        self.check.setFont(font)
-        self.check.setStyleSheet("QPushButton{\n"
-"color: #black;\n"
-"background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 white, stop: 1 #FFE9AD);\n"
-"border-style: solid;\n"
-"border-color: black;\n"
-"border-width: 1.5px;\n"
-"border-radius: 10px;\n"
-"}\n"
-"QPushButton:hover:!pressed\n"
-"{\n"
-"  border: 1.5px solid black;\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #B39A56, stop: 1 #FFE9AD);\n"
-"}\n"
-"\n"
-"")
-        self.check.setObjectName("check")
         self.create = QtWidgets.QPushButton(self.widget)
         self.create.setGeometry(QtCore.QRect(40, 520, 491, 151))
         font = QtGui.QFont()
@@ -278,7 +257,7 @@ class Ui_Form(object):
 "")
         self.create.setObjectName("create")
         self.display = QtWidgets.QPushButton(self.widget)
-        self.display.setGeometry(QtCore.QRect(550, 330, 491, 151))
+        self.display.setGeometry(QtCore.QRect(300, 340, 491, 151))
         font = QtGui.QFont()
         font.setPointSize(25)
         self.display.setFont(font)
@@ -356,7 +335,6 @@ class Ui_Form(object):
         Form.setWindowTitle(QtWidgets.QApplication.translate("Form", "Form", None, -1))
         self.logout.setText(QtWidgets.QApplication.translate("Form", "Logout", None, -1))
         self.profile.setText(QtWidgets.QApplication.translate("Form", "Profile", None, -1))
-        self.check.setText(QtWidgets.QApplication.translate("Form", "Check Attendace", None, -1))
         self.create.setText(QtWidgets.QApplication.translate("Form", "Create New Course", None, -1))
         self.display.setText(QtWidgets.QApplication.translate("Form", "Display All Courses", None, -1))
         self.delete_2.setText(QtWidgets.QApplication.translate("Form", "Delete Course", None, -1))
