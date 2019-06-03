@@ -6,6 +6,7 @@ from PySide2.QtGui import *
 from controller.Learner.LearnerSearchMenu import LrnSearch
 from controller.Learner.LearnerProfile import LrnProfile
 from controller.Learner.LearnerViewEnrolledCourse import LrnViewEnrolled
+from backend.course import *
 from screen.LrnMenu import Ui_Form
 from backend.User import *
 
@@ -26,6 +27,9 @@ class LearnerMenu(QWidget):
         self.ui.pushButton_3.clicked.connect(self.Profile)
         self.ui.Search.clicked.connect(self.Find)
         self.learner = Learner(uname)
+        self.course = Course()
+        self.courses = self.course.browse(self.upref)
+        self.ui.tableView.setModel(self.courses)
 
     def Logout(self):
         self.hide()

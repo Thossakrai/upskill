@@ -27,7 +27,7 @@ class LrnProfile(QWidget):
 
     def editdetail(self):
         self.hide()
-        self.EditProf = OrgImproveProfile(self)
+        self.EditProf = OrgImproveProfile(self, self.learner)
         self.EditProf.show()
 
     def getProfile(self):
